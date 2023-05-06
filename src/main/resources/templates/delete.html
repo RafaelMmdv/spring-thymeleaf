@@ -8,9 +8,11 @@
 
 <form action="#" th:action = "@{delete}" th:object = "${student}" method="POST">
     <p> ID <input type="number" th:field = "*{id}"> aaa</p>
+    <p>Name <input type="text" th:field ="*{firstName}">Name</p>
 
     <p>
         <input type="submit" name="id" th:value="delete" />
+        <input type="submit" name="firstname" th:value = "name" />
     </p>
 </form>
 

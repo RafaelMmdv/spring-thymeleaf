@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../static/create.css">
+    <link rel="stylesheet" href="/static/create.css">
+
 </head>
 <body>
-
+<div class="container">
+    <div class="form-container">
 <h1>
   Student create page
 </h1>
 
-<form action="#" th:action = "@{create}" th:object = "${student}" method="POST">
-  <p> FirstName: <input type="text" th:field = "*{firstName}"> </p>
-  <p> LastName: <input type="text" th:field = "*{lastName}"> </p>
+
+<form action="#" th:action = "@{create}" th:object = "${student}" method="POST" >
+  <p> FirstName: <input type="text" th:field = "*{firstName}" style="margin-left: 15px"> </p>
+  <p style="color: blue"> LastName: <input type="text" th:field = "*{lastName}" style="margin-left: 15px; color: red"> </p>
   <p> Email: <input type="text" th:field = "*{email}"> </p>
 
   <p>
@@ -21,6 +24,8 @@
     <input type="submit" value="Reset"/>
   </p>
 </form>
+    </div>
+</div>
 
 </body>
 </html>
