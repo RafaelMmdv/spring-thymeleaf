@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/create.css">
+</head>
+<body>
+
+<h1>
+  Student create page
+</h1>
+
+<form action="#" th:action = "@{create}" th:object = "${student}" method="POST">
+  <p> FirstName: <input type="text" th:field = "*{firstName}"> </p>
+  <p> LastName: <input type="text" th:field = "*{lastName}"> </p>
+  <p> Email: <input type="text" th:field = "*{email}"> </p>
+
+  <p>
+    <input type="submit" value="Create"/>
+    <input type="submit" value="Reset"/>
+  </p>
+</form>
+
+</body>
+</html>

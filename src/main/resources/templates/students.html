@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th style="margin-left: 30px">First Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+
+<tr th:each="student : ${students}">
+  <td th:text="${student.id}">123</td>
+  <td th:text="${student.firstName}"  style="margin-left: 15px">test</td>
+  <td th:text="${student.lastName}" style="margin-left: 15px">test</td>
+  <td th:text="${student.email}" style="margin-left: 15px">test</td>
+
+</tr>
+</table>
+
+</body>
+</html>
