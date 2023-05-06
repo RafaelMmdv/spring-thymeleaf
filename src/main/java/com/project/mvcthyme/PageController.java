@@ -1,6 +1,7 @@
 package com.project.mvcthyme;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,6 +44,20 @@ public class PageController {
     public String create(@ModelAttribute Student student){
 
         studentRepository.save(student);
+        return "redirect:/students";
+    }
+
+    @GetMapping("/delete")
+    public String delete(Model model){
+        Student student = new Student();
+        model.addAttribute("student", student);
+        return "delete";
+    }
+
+    @PostMapping("/delete")
+    public String delete(@ModelAttribute Student student){
+
+        studentRepository.delete(student);
         return "redirect:/students";
     }
 }
