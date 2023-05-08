@@ -1,0 +1,64 @@
+
+.container{
+
+}
+
+h1 {
+    color: blue;
+    font-family: Arial;
+}
+
+.container {
+    /*position: absolute;*/
+    /*width: 400px;*/
+    /*max-width: 450px;*/
+
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+
+    /*justify-content: center;*/
+    background-image: url("/static/universityimg.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+}
+
+.form-container{
+    margin: auto;
+    margin-top: 200px;
+    border: 2px solid black;
+    padding: 15px 35px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.input-in{
+
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 200px;
+    height: 35px;
+
+}
+
+
+
+.btn {
+    background-color: blue;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 1px solid blue;
+
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}

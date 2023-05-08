@@ -1,0 +1,22 @@
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    align-content: center;
+    padding: 5px 10px;
+}
+
+.email {
+    background-color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}

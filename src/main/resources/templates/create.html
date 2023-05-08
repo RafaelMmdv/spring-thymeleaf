@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:security="http://www.springframework.org/schema/integration/scripting">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/static/create.css">
-
+    <link href="/static/css/create.css" rel="stylesheet" th:href="@{/css/create.css}">
+    <security:intercept-url pattern="/resources/**" access="permitAll" />
 </head>
 <body>
 <div class="container">
@@ -15,13 +16,13 @@
 
 
 <form action="#" th:action = "@{create}" th:object = "${student}" method="POST" >
-  <p> FirstName: <input type="text" th:field = "*{firstName}" style="margin-left: 15px"> </p>
-  <p style="color: blue"> LastName: <input type="text" th:field = "*{lastName}" style="margin-left: 15px; color: red"> </p>
-  <p> Email: <input type="text" th:field = "*{email}"> </p>
+  <p><input placeholder="First Name" class="input-in" type="text" th:field = "*{firstName}" > </p>
+  <p><input placeholder="Last Name" class="input-in" type="text" th:field = "*{lastName}" > </p>
+  <p><input placeholder="Email" class="input-in" type="text" th:field = "*{email}"> </p>
 
   <p>
-    <input type="submit" value="Create"/>
-    <input type="submit" value="Reset"/>
+    <input class="btn" type="submit" value="Create"/>
+    <input class="btn" type="submit" value="Reset"/>
   </p>
 </form>
     </div>
