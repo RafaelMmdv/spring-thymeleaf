@@ -13,6 +13,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
+
 @Controller
 public class PageController {
 
@@ -64,15 +66,19 @@ public class PageController {
         return "redirect:/students";
     }
 
-    @GetMapping("/edit/{id}")
-    public  String edit (@PathVariable("id") Model model, Integer id, RedirectAttributes ra){
-        List<Student> students = studentRepository.findAll();
-        model.addAttribute("students", students);
-        return "students";
+    @GetMapping("/update/{id}")
+    public String update(@PathVariable("id") Long id, Model model) {
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Geçersiz öğrenci ID: " + id));
+
+        model.addAttribute("student", student);
+        return "update";
     }
 
-
-
-
-
+    @PostMapping("/update")
+    public String update(@ModelAttribute Student student) {
+        studentRepository.save(student);
+        return "redirect:/students";
+    }
+    
 }
