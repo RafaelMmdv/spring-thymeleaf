@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
     <title>Öğrenci Güncelle</title>
@@ -8,24 +9,16 @@
 <body>
 <div class="container">
     <h2>Öğrenci Güncelle</h2>
-    <form action="/students/update" method="POST">
-        <input type="hidden" name="id" value="${student.id}">
-        <div>
-            <label for="firstName">Ad:</label>
-            <input type="text" id="firstName" name="firstName" value="${student.firstName}" required>
-        </div>
 
-        <div>
-            <label for="email">E-posta:</label>
-            <input type="email" id="email" name="email" value="${student.email}" required>
-        </div>
-        <div>
-            <label for="phone">Telefon:</label>
-            <input type="tel" id="phone" name="phone" value="${student.phone}" required>
-        </div>
-        <div>
-            <input type="submit" value="Update">
-        </div>
+
+    <form action="#" th:action = "@{/update/{id}(id=${student.id})}" th:object = "${student}" method="POST" >
+        <p><input placeholder="First Name" class="input-in" type="text" th:field="${student.firstName}" > </p>
+        <p><input placeholder="Last Name" class="input-in" type="text" th:field= "${student.lastName}" > </p>
+        <p><input placeholder="Email" class="input-in" type="text" th:field = "${student.email}"> </p>
+
+        <p>
+            <input class="btn" type="submit" th:value="update"/>
+        </p>
     </form>
 </div>
 </body>

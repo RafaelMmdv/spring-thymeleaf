@@ -69,16 +69,15 @@ public class PageController {
     @GetMapping("/update/{id}")
     public String update(@PathVariable("id") Long id, Model model) {
         Student student = studentRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Geçersiz öğrenci ID: " + id));
-
+                .orElseThrow(() -> new IllegalArgumentException("Invalid student ID: " + id));
         model.addAttribute("student", student);
         return "update";
     }
 
-    @PostMapping("/update")
+    @PostMapping("/update/{id}")
     public String update(@ModelAttribute Student student) {
         studentRepository.save(student);
         return "redirect:/students";
     }
-    
+
 }
