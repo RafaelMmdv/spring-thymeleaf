@@ -67,10 +67,12 @@ public class PageController {
     }
 
     @GetMapping("/update/{id}")
-    public String update(@PathVariable("id") Long id, Model model) {
+    public String update(@PathVariable("id") Long id, Model model, RedirectAttributes ra) {
         Student student = studentRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid student ID: " + id));
         model.addAttribute("student", student);
+        model.addAttribute("pageTitle", "Edit user (ID:" + id + ")");
+        ra.addFlashAttribute("message", "The user added successfully.");
         return "update";
     }
 

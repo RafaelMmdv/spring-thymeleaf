@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="/static/css/create.css" rel="stylesheet" th:href="@{/css/create.css}">
-    <security:intercept-url pattern="/resources/**" access="permitAll" />
 </head>
 <body>
+
 <div class="container">
+<div class="img-container">
+    <img class="image" th:src="@{/image/universityimg.jpg}" alt="image" src="/static/image/universityimg.jpg"/>
+</div>
     <div class="form-container">
 <h1>
   Student create page
@@ -18,7 +21,7 @@
 <form action="#" th:action = "@{create}" th:object = "${student}" method="POST" >
   <p><input placeholder="First Name" class="input-in" type="text" th:field = "*{firstName}" > </p>
   <p><input placeholder="Last Name" class="input-in" type="text" th:field = "*{lastName}" > </p>
-  <p><input placeholder="Email" class="input-in" type="text" th:field = "*{email}"> </p>
+  <p><input placeholder="Email" th:type="email" class="input-in" type="email" th:field = "*{email}"> </p>
 
   <p>
     <input class="btn" type="submit" value="Create"/>

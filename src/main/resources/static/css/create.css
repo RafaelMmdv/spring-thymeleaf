@@ -1,38 +1,41 @@
 
-.container{
-
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 h1 {
-    color: blue;
+    color: white;
     font-family: Arial;
 }
 
-.container {
-    /*position: absolute;*/
-    /*width: 400px;*/
-    /*max-width: 450px;*/
+.container{
+    display: flex;
+}
 
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
+.img-container{
+    position: absolute;
+}
 
-    /*justify-content: center;*/
-    background-image: url("/static/universityimg.jpg");
+.image{
     background-position: center;
     background-size: cover;
-    height: 100vh;
     max-width: 100%;
     display: flex;
 }
 
+
 .form-container{
     margin: auto;
-    margin-top: 200px;
-    border: 2px solid black;
+    border: none;
     padding: 15px 35px;
     text-align: center;
     border-radius: 25px;
+    position: relative;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin-top: 200px;
 }
 
 .input-in{

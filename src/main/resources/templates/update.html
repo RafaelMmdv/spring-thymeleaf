@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org" >
+      xmlns:th="http://www.thymeleaf.org" xmlns:security="http://www.springframework.org/schema/integration/scripting">
 <head>
     <meta charset="UTF-8">
     <title>Öğrenci Güncelle</title>
-    <link rel="stylesheet" href="/css/students.css">
+    <link rel="stylesheet" href="/static/css/update.css" th:href="@{/css/update.css}">
 </head>
 <body>
 <div class="container">
-    <h2>Öğrenci Güncelle</h2>
 
+
+<div class="form-container">
+
+    <h2>[[${pageTitle}]] </h2>
 
     <form action="#" th:action = "@{/update/{id}(id=${student.id})}" th:object = "${student}" method="POST" >
         <p><input placeholder="First Name" class="input-in" type="text" th:field="${student.firstName}" > </p>
@@ -20,6 +23,7 @@
             <input class="btn" type="submit" th:value="update"/>
         </p>
     </form>
+    </div>
 </div>
 </body>
 </html>

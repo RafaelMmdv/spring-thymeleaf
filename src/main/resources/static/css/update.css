@@ -1,0 +1,51 @@
+
+
+body {
+    display: flex;
+}
+
+.container {
+display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    border: 1px solid black;
+    width: 400px;
+
+}
+
+h2{
+    color: blue;
+}
+
+.input-in{
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 200px;
+    height: 35px;
+    justify-content: center;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 1px solid blue;
+
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}

@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
   <link rel="stylesheet" href="/css/students.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
 
+<h1>
+  Students List
+</h1>
+
 <table>
   <tr>
     <th>Id</th>
     <th>First Name</th>
+    <th>Last Name</th>
     <th>Email</th>
-    <th>Phone</th>
     <th>EDIT</th>
   </tr>
 
@@ -23,6 +28,7 @@
   <td th:text="${student.firstName}" >test</td>
   <td th:text="${student.lastName}" style="margin-left: 15px">test</td>
   <td class="email" th:text="${student.email}" style="margin-left: 15px">test</td>
+  <td>Edit</td>
 
 
 </tr>
