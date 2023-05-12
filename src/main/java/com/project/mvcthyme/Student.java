@@ -59,4 +59,8 @@ public class Student {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public Object getPassword() {
+        return firstName;
+    }
 }

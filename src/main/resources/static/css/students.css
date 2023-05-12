@@ -23,6 +23,9 @@ th, td{
     padding: 5px 10px;
 }
 
+td {
+    background-color: aquamarine;
+}
 
 .container {
     display: flex;
@@ -30,4 +33,14 @@ th, td{
     flex-direction: column;
     align-items: center;
 
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 7px;
+    border: 1px solid blue;
+    text-decoration: none;
+    font-size: 15px;
 }
