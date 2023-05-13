@@ -79,5 +79,23 @@ public class PageController {
         return "redirect:/students";
     }
 
+    @GetMapping("/login")
+    public String login (){
+
+        return "login";
+    }
+
+    @PostMapping("/login")
+    public String login (@RequestParam("firstName") String firstName, String password, Model model ){
+        Student student = studentRepository.findByFirstName(firstName);
+        if (student != null && student.getPassword().equals(password)) {
+            // Successful login
+            return "redirect:/students";
+        } else {
+            // Invalid credentials
+            model.addAttribute("error", "Invalid username or password");
+            return "login";
+        }
+    }
 
 }

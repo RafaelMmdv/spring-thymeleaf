@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{'/css/login.css'}" href="/static/css/login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+
+<form class="form-container" th:action="@{/login}" method="POST">
+
+    <h1>Login</h1>
+    <p>
+        <label for="firstName">Username:</label>
+        <input class="input-in" type="text" id="firstName" name="firstName" required>
+    </p>
+
+    <p>
+        <label for="password">Password:</label>
+        <input class="input-in" type="password" id="password" name="password" required>
+    </p>
+
+
+
+    <p>
+        <input class="btn" type="submit" th:value="Login">
+    </p>
+
+    <p>
+        <a th:href="@{'/create'}">Create account</a>
+    </p>
+
+</form>
+
+</div>
+
+</body>
+</html>

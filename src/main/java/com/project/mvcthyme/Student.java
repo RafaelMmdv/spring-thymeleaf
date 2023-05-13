@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import org.springframework.boot.autoconfigure.web.WebProperties;
 
 @Entity(name = "Students1")
 public class Student {
@@ -17,6 +16,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String email;
+    private String password;
 
     public Long getId() {
         return id;
@@ -50,6 +50,16 @@ public class Student {
         this.email = email;
     }
 
+    public String getPassword(){
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+
+
     @Override
     public String toString() {
         return "Student{" +
@@ -57,10 +67,8 @@ public class Student {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", password=" + password +
                 '}';
     }
 
-    public Object getPassword() {
-        return firstName;
-    }
 }

@@ -21,6 +21,7 @@
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email</th>
+    <th>Password</th>
     <th>EDIT</th>
     <th>DELETE</th>
   </tr>
@@ -29,7 +30,8 @@
   <td th:text="${student.id}">123</td>
   <td th:text="${student.firstName}" >test</td>
   <td th:text="${student.lastName}" style="margin-left: 15px">test</td>
-  <td class="email" th:text="${student.email}" style="margin-left: 15px">test</td>
+  <td th:text="${student.email}" style="margin-left: 15px">test</td>
+  <td th:text="${student.password}">password</td>
   <td> <a class="btn" th:href="@{'/update/' + ${student.id}}" >Edit</a> </td>
   <td> <a class="btn" th:href="@{'/delete'}" >Delete</a> </td>
 

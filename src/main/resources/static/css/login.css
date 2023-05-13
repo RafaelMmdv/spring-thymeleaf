@@ -1,32 +1,7 @@
-
 body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
     font-family: Roboto, sans-serif;
-}
-
-h1 {
-    color: white;
-    font-family: Arial;
-}
-
-.container{
-    display: flex;
-}
-
-.img-container{
-    position: absolute;
-}
-
-.image{
-    background-position: center;
-    background-size: cover;
-    max-width: 100%;
-    display: flex;
 
 }
-
 
 .form-container{
     margin: auto;
@@ -36,7 +11,7 @@ h1 {
     border-radius: 25px;
     position: relative;
     width: 400px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgb(51, 207, 255);
     margin-top: 200px;
 }
 
@@ -49,21 +24,15 @@ h1 {
 
 }
 
-
+.container {
+    display: flex;
+}
 
 .btn {
     background-color: blue;
     color: white;
-
     padding: 5px 10px;
     border-radius: 7px;
     border: 1px solid blue;
 
-}
-
-.btn:hover{
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    cursor: pointer;
 }
