@@ -20,10 +20,10 @@
 
 
 <form action="#" th:action = "@{create}" th:object = "${student}" method="POST" >
-  <p><input placeholder="First Name" class="input-in" type="text" th:field = "*{firstName}" > </p>
+  <p><input placeholder="First Name" class="input-in" type="text" th:field = "*{firstName}" required > </p>
   <p><input placeholder="Last Name" class="input-in" type="text" th:field = "*{lastName}" > </p>
-  <p><input placeholder="Email" th:type="email" class="input-in" type="email" th:field = "*{email}"> </p>
-  <p><input placeholder="Password" th:type="password" class="input-in" type="password" th:field="*{password}"></p>
+  <p><input placeholder="Email" th:type="email" class="input-in" type="email" th:field = "*{email}" required> </p>
+  <p><input placeholder="Password" th:type="password" class="input-in" type="password" th:field="*{password}"  minvalue="5" maxvalue="15" required ></p>
   <p>
     <input class="btn" type="submit" value="Create"/>
     <input class="btn" type="submit" value="Reset"/>

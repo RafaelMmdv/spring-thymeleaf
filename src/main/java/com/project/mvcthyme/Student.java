@@ -19,6 +19,7 @@ public class Student {
     private String password;
 
     public Long getId() {
+
         return id;
     }
 
@@ -27,6 +28,7 @@ public class Student {
     }
 
     public String getFirstName() {
+
         return firstName;
     }
 

@@ -49,17 +49,21 @@ public class PageController {
         return "redirect:/students";
     }
 
-    @GetMapping("/delete")
-    public String delete(Model model){
-        Student student = new Student();
-        model.addAttribute("student", student);
-        return "delete";
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable("id") Long id, Model model) {
+        Student student = studentRepository.findById(id).orElse(null);
+        if (student != null) {
+            model.addAttribute("student", student);
+            return "delete";
+        } else {
+            // Handle student not found case
+            return "error";
+        }
     }
 
-    @PostMapping("/delete")
-    public String delete(@ModelAttribute Student student){
-
-        studentRepository.delete(student);
+    @PostMapping("/delete/{id}")
+    public String deleteConfirmed(@PathVariable("id") Long id) {
+        studentRepository.deleteById(id);
         return "redirect:/students";
     }
 

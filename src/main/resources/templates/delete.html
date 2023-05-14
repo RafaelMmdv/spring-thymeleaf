@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="#" th:action = "@{delete}" th:object = "${student}" method="POST">
+<form action="#" th:action = "@{/delete/{id}(id=${student.id})}" th:object = "${student}" method="POST">
     <p> ID <input type="number" th:field = "*{id}"> aaa</p>
     <p>Name <input type="text" th:onclick th:field ="*{firstName}">Name</p>
 

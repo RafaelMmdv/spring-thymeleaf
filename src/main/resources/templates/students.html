@@ -33,7 +33,7 @@
   <td th:text="${student.email}" style="margin-left: 15px">test</td>
   <td th:text="${student.password}">password</td>
   <td> <a class="btn" th:href="@{'/update/' + ${student.id}}" >Edit</a> </td>
-  <td> <a class="btn" th:href="@{'/delete'}" >Delete</a> </td>
+  <td> <a class="btn" th:href="@{'/delete/' + ${student.id}}" >Delete</a> </td>
 
 
 </tr>
